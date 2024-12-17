@@ -1,0 +1,74 @@
+@using Sitecore.Mvc
+@using Sitecore.Data.Fields
+@using Sitecore.Data.Items
+@model Test.Models.FooterModel
+
+<link rel="stylesheet" href="~/css/Footer.css" />
+
+<div class="footer">
+    @if (Model != null && Model.Item != null)
+    {
+        MultilistField multiselectField = Model.Item.Fields["Columns"];
+        Item[] items = multiselectField.GetItems();
+
+        <div class="footer-columns">
+            @foreach (var item in items)
+            {
+                if (item.Name == "Column2")
+                {
+                    <div class="footer-column">
+                        <h3>@Html.Sitecore().Field("Title", item)</h3>
+                        <div class="footer-column-inner">
+                            <div class="footer-column-inner-half">
+                                <p>@Html.Sitecore().Field("Item1", item)</p>
+                                <p>@Html.Sitecore().Field("Item2", item)</p>
+                                <p>@Html.Sitecore().Field("Item3", item)</p>
+                                <p>@Html.Sitecore().Field("Item4", item)</p>
+                                <p>@Html.Sitecore().Field("Item5", item)</p>
+                            </div>
+                            <div class="footer-column-inner-half">
+                                <p>@Html.Sitecore().Field("Item6", item)</p>
+                                <p>@Html.Sitecore().Field("Item7", item)</p>
+                                <p>@Html.Sitecore().Field("Item8", item)</p>
+                                <p>@Html.Sitecore().Field("Item9", item)</p>
+                                <p>@Html.Sitecore().Field("Item10", item)</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="footer-column">
+                        <h3>@Html.Sitecore().Field("Title", item)</h3>
+                        <p>@Html.Sitecore().Field("Item1", item)</p>
+                        <p>@Html.Sitecore().Field("Item2", item)</p>
+                        <p>@Html.Sitecore().Field("Item3", item)</p>
+                        <p>@Html.Sitecore().Field("Item4", item)</p>
+                        <p>@Html.Sitecore().Field("Item5", item)</p>
+                        <p>@Html.Sitecore().Field("Item6", item)</p>
+                        <p>@Html.Sitecore().Field("Item7", item)</p>
+                        <p>@Html.Sitecore().Field("Item8", item)</p>
+                        <p>@Html.Sitecore().Field("Item9", item)</p>
+                        <p>@Html.Sitecore().Field("Item10", item)</p>
+                    </div>
+                }
+            }
+        </div>
+
+        string droplinkFieldValue = Model.Item["FooterNav"];
+        Item linkedItem = Sitecore.Context.Database.GetItem(droplinkFieldValue);
+
+        <div class="footer-nav">
+            <div class="footer-logo">
+                @Html.Sitecore().Field("Logo", linkedItem)
+            </div>
+            <a href="#">@Html.Sitecore().Field("NavItem1", linkedItem)</a>
+            <a href="#">@Html.Sitecore().Field("NavItem2", linkedItem)</a>
+            <a href="#">@Html.Sitecore().Field("NavItem3", linkedItem)</a>
+        </div>
+
+        <div class="footer-bottom-text">
+            <p>@Html.Sitecore().Field("FooterText", Model.Item)</p>
+        </div>
+    }
+</div>

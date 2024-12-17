@@ -1,0 +1,160 @@
+﻿.footer {
+
+    background-color: #1f1f1f; /* Dark background */
+
+    color: #fff; /* White text color */
+
+    padding: 40px 20px; /* Spacing inside the footer */
+
+    display: flex;
+
+    flex-direction: column; /* Ensure footer-bottom-text is at the bottom */
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+ 
+.footer-columns {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    flex-wrap: wrap;
+
+}
+ 
+.footer-column {
+
+    flex: 1;
+
+    min-width: 200px; /* Minimum width for columns */
+
+    margin: 20px; /* Space between columns */
+
+}
+ 
+.footer-column-inner {
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+ 
+.footer-column-inner-half {
+
+    flex: 1;
+
+    min-width: 100px;
+
+}
+ 
+.footer-column h3 {
+
+    font-weight: bold; /* Bold column titles */
+
+    margin-bottom: 20px; /* Space below titles */
+
+}
+ 
+.footer-column p, .footer-column a {
+
+    color: #aaa; /* Light gray text color for content */
+
+    margin: 10px 0; /* Add spacing between items */
+
+    text-decoration: none; /* Remove underline from links */
+
+}
+ 
+    .footer-column a:hover {
+
+        color: #fff; /* Change link color on hover */
+
+    }
+ 
+.footer-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-right: 20px; /* Space between logo and nav links */
+
+}
+ 
+    .footer-logo img {
+
+        max-width: 100px; /* Adjust the logo size as needed */
+
+    }
+ 
+.footer-nav {
+
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* Gradient background */
+
+    padding: 10px 0;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 40px; /* Increase gap for more space between logo and nav items */
+
+    margin-top: 20px;
+
+}
+ 
+    .footer-nav a {
+
+        padding: 10px 20px;
+
+        color: white;
+
+        font-weight: bold; /* Bold nav links */
+
+        text-decoration: none;
+
+    }
+ 
+.footer-bottom-text {
+
+    background-color: #2a2a2a; /* Slightly lighter background for the bottom */
+
+    padding: 20px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    color: #aaa; /* Light gray text */
+
+    width: 100%;
+
+}
+ 
+    .footer-bottom-text a {
+
+        color: #aaa;
+
+        text-decoration: none;
+
+    }
+ 
+        .footer-bottom-text a:hover {
+
+            color: #fff;
+
+        }
+
+ 
+ 

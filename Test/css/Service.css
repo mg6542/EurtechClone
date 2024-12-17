@@ -1,0 +1,75 @@
+﻿.services-section {
+    background-color: #111827; /* Dark background */
+    padding: 50px 20px;
+    text-align: left;
+    color: #ffffff; /* Text color */
+}
+
+.services-heading {
+    font-size: 1.2rem;
+    color: #38bdf8; /* Light blue for the pre-header */
+    margin-bottom: 10px;
+}
+
+.services-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff; /* White heading */
+    margin-bottom: 30px;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: left;
+}
+
+/* Individual Service Card */
+.service-card {
+    background-color: #1f2937; /* Slightly lighter dark background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+/* Icon Styling */
+.service-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Title Styling */
+.service-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Description Styling */
+.service-description {
+    font-size: 0.9rem;
+    color: #d1d5db; /* Lighter gray for text */
+    margin-bottom: 20px;
+}
+
+/* Footer (Read More) Styling */
+.service-footer {
+    font-size: 0.9rem;
+    color: #38bdf8; /* Highlighted blue */
+    text-decoration: none;
+    position: relative;
+}
+
+
+    .service-footer:hover {
+        text-decoration: underline;
+    }
